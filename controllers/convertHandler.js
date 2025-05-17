@@ -22,9 +22,9 @@ function ConvertHandler() {
   };
 
   this.getUnit = function (input) {
-    if (input === 'l' || input === "L") return 'L'
-
     const inputToLower = input.toLowerCase()
+    
+    if (input === 'l') return 'L'
 
     return (inputToLower in UNID) ? inputToLower : 'invalid unit';
   };
