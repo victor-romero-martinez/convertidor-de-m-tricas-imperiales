@@ -22,9 +22,11 @@ function ConvertHandler() {
   };
 
   this.getUnit = function (input) {
-    if (input === 'l') return 'L'
+    if (input === 'l' || input === "L") return 'L'
 
-    return (input.toLowerCase() in UNID) ? input : 'invalid unit';
+    const inputToLower = input.toLowerCase()
+
+    return (inputToLower in UNID) ? inputToLower : 'invalid unit';
   };
 
   this.getReturnUnit = function (initUnit) {
